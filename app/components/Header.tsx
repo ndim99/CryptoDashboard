@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 export default function Header() {
   return (
-    <header className="bg-gray-800 text-white shadow-md 2xl:py-4 lg:py-3 py-2.5 2xl:px-6 lg:px-5 px-4 flex items-center justify-between">
+    <header className="bg-gray-800 text-white shadow-md 2xl:py-4 lg:py-3 py-2.5 2xl:px-6 lg:px-5 px-4 flex items-center justify-between border-b border-gray-700">
       <div className="flex items-center 2xl:gap-3 lg:gap-2.5 gap-2">
         <Image
           src={"/nikola.png"}
