@@ -17,8 +17,8 @@ export default function TokenDetails() {
     );
   }
 
-  const priceChangeClass =
-    (tokenData.change24h as number) >= 0 ? "text-green-500" : "text-red-500";
+  const priceChangeClass = (interval: number) =>
+    interval >= 0 ? "text-green-500" : "text-red-500";
 
   return (
     <div className="flex flex-col 2xl:gap-6 lg:gap-5 gap-4 2xl:p-6 lg:p-5 p-4 text-white">
@@ -50,14 +50,14 @@ export default function TokenDetails() {
           value={`${
             (tokenData.change1h as number) >= 0 ? "+" : ""
           }${tokenData.change1h.toFixed(2)}%`}
-          className={priceChangeClass}
+          className={priceChangeClass(tokenData.change1h)}
         />
         <TokenDetailItem
           label="(24H) Price Change %"
           value={`${
             (tokenData.change24h as number) >= 0 ? "+" : ""
           }${tokenData.change24h.toFixed(2)}%`}
-          className={priceChangeClass}
+          className={priceChangeClass(tokenData.change24h)}
         />
         <TokenDetailItem
           label="Liquidity"
