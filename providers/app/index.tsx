@@ -6,6 +6,7 @@ import {
   useState,
   Dispatch,
   SetStateAction,
+  useEffect,
 } from "react";
 
 export interface AppContextType {
@@ -17,6 +18,19 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [tokenData, setTokenData] = useState<TokenData>();
+
+  useEffect(() => {
+    const storedData = localStorage.getItem("tokenData");
+    if (storedData) {
+      setTokenData(JSON.parse(storedData));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (tokenData) {
+      localStorage.setItem("tokenData", JSON.stringify(tokenData));
+    }
+  }, [tokenData]);
 
   return (
     <AppContext.Provider
