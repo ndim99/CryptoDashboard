@@ -1,19 +1,18 @@
 import { useEffect, useRef } from "react";
-import {
-  createChart,
-  IChartApi,
-  ISeriesApi,
-  ColorType,
-} from "lightweight-charts";
+import { createChart, IChartApi, ISeriesApi } from "lightweight-charts";
 import { ChartDataPoint } from "@/types/TokenTypes";
+import { useTheme } from "next-themes";
 
 export default function WalletPerformanceChart({
   data,
 }: {
   data: ChartDataPoint[];
 }) {
+  const { theme } = useTheme();
+
   const chartContainerRef = useRef<HTMLDivElement>(null);
   const chartInstance = useRef<IChartApi | null>(null);
+  const areaSeries = useRef<ISeriesApi<"Area"> | null>(null);
 
   useEffect(() => {
     if (!chartContainerRef.current) return;
@@ -23,12 +22,12 @@ export default function WalletPerformanceChart({
       width: chartContainerRef.current.clientWidth,
       height: chartContainerRef.current.clientHeight,
       layout: {
-        textColor: "white",
-        background: { color: "#1f2937" },
+        textColor: theme === "dark" ? "white" : "black",
+        background: { color: theme === "dark" ? "#1f2937" : "#d1d5db" },
       },
       grid: {
-        vertLines: { color: "#374151" },
-        horzLines: { color: "#374151" },
+        vertLines: { color: theme === "dark" ? "#374151" : "#9ca3af" },
+        horzLines: { color: theme === "dark" ? "#374151" : "#9ca3af" },
       },
     });
 
@@ -36,15 +35,16 @@ export default function WalletPerformanceChart({
     chartInstance.current = chart;
 
     // Add area series
-    const areaSeries: ISeriesApi<"Area"> = chart.addAreaSeries({
+    const series = chart.addAreaSeries({
       lineColor: "#2962FF",
       topColor: "#2962FF",
       bottomColor: "rgba(41, 98, 255, 0.28)",
     });
 
-    // Data to display
+    areaSeries.current = series;
 
-    areaSeries.setData(data);
+    // Set the data
+    series.setData(data);
 
     // Fit the data to the chart view
     chart.timeScale().fitContent();
@@ -53,7 +53,23 @@ export default function WalletPerformanceChart({
     return () => {
       chart.remove();
     };
-  }, []);
+  }, [data]);
+
+  useEffect(() => {
+    if (!chartInstance.current) return;
+
+    // Update chart theme when theme changes
+    chartInstance.current.applyOptions({
+      layout: {
+        textColor: theme === "dark" ? "white" : "black",
+        background: { color: theme === "dark" ? "#1f2937" : "#d1d5db" },
+      },
+      grid: {
+        vertLines: { color: theme === "dark" ? "#374151" : "#9ca3af" },
+        horzLines: { color: theme === "dark" ? "#374151" : "#9ca3af" },
+      },
+    });
+  }, [theme]);
 
   return (
     <div

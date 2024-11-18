@@ -12,7 +12,7 @@ export default function TokenDetails() {
 
   if (!tokenData) {
     return (
-      <div className="min-h-screen bg-gray-900 text-white 2xl:p-5 lg:p-4 p-3">
+      <div className="min-h-screen bg-gray-900 text-black dark:text-white 2xl:p-5 lg:p-4 p-3">
         Loading token data...
       </div>
     );
@@ -23,7 +23,7 @@ export default function TokenDetails() {
 
   return (
     <Container>
-      <div className="flex flex-wrap p-4 border border-gray-700 rounded-lg 2xl:gap-4 gap-3 items-center justify-between bg-gray-700">
+      <div className="flex flex-wrap p-4 border border-gray-300 dark:border-gray-600 rounded-lg 2xl:gap-4 gap-3 items-center justify-between bg-gray-300 dark:bg-gray-700">
         <div className="flex items-center gap-2">
           <Image
             src={tokenData.image as string}
@@ -35,7 +35,9 @@ export default function TokenDetails() {
           <div className="flex flex-col">
             <div className="flex items-center gap-1">
               <span className="uppercase font-bold">{tokenData.symbol}</span>
-              <span className="text-gray-400 text-sm">{tokenData.name}</span>
+              <span className="text-gray-600 dark:text-gray-400 text-sm">
+                {tokenData.name}
+              </span>
             </div>
             <SocialLinks socials={tokenData.socials} />
           </div>

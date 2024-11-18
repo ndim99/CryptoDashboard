@@ -19,7 +19,7 @@ export default function ChainSelector({ chain, setChain }: ChainSelectorProps) {
   return (
     <div className="relative w-max">
       <div
-        className="w-full flex justify-between items-center gap-2 bg-gray-800 text-white 2xl:py-2 py-1.5 2xl:px-4 lg:px-3 px-2 rounded-md cursor-pointer border border-gray-600 hover:bg-gray-700 transition-colors h-[42px]"
+        className="w-full flex justify-between items-center gap-2 bg-gray-200 dark:bg-gray-800 text-black dark:text-white 2xl:py-2 py-1.5 2xl:px-4 lg:px-3 px-2 rounded-md cursor-pointer border border-gray-300 dark:border-gray-600 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors h-[42px]"
         onClick={() => setDropdown(!dropdown)}
       >
         <div className="flex items-center gap-2">
@@ -43,10 +43,10 @@ export default function ChainSelector({ chain, setChain }: ChainSelectorProps) {
       </div>
 
       {dropdown && (
-        <div className="absolute left-0 mt-2 w-full bg-gray-800 border border-gray-700 rounded-md shadow-lg z-10">
+        <div className="absolute left-0 mt-2 w-full bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-lg z-10">
           <div className="flex flex-col">
             <div
-              className="flex items-center gap-2 py-2 px-4 cursor-pointer hover:bg-gray-700 transition-colors h-[42px]"
+              className="flex items-center gap-2 py-2 px-4 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors h-[42px]"
               onClick={() => handleChainChange("ethereum")}
             >
               <Image
@@ -59,7 +59,7 @@ export default function ChainSelector({ chain, setChain }: ChainSelectorProps) {
               <p>Ethereum</p>
             </div>
             <div
-              className="flex items-center gap-2 py-2 px-4 cursor-pointer hover:bg-gray-700 transition-colors h-[42px]"
+              className="flex items-center gap-2 py-2 px-4 cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors h-[42px]"
               onClick={() => handleChainChange("solana")}
             >
               <Image

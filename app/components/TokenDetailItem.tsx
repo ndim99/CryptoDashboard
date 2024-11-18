@@ -11,7 +11,7 @@ export default function TokenDetailItem({
 }: TokenDetailItemProps) {
   return (
     <div className="flex flex-col">
-      <p className="text-gray-400 text-sm">{label}</p>
+      <p className="text-gray-600 dark:text-gray-400 text-sm">{label}</p>
       <p className={`${className} font-semibold`}>{value}</p>
     </div>
   );

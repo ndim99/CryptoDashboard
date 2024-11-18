@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-gray-400 2xl:py-6 lg:py-5 py-4 2xl:px-5 lg:px-4 px-3 border-t border-gray-700">
+    <footer className="bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-400 2xl:py-6 lg:py-5 py-4 2xl:px-5 lg:px-4 px-3 border-t border-gray-300 dark:border-gray-600">
       <div className="container mx-auto text-center">
-        <p className="text-lg font-semibold text-white mb-2">
+        <p className="text-lg font-semibold text-black dark:text-white mb-2">
           Crypto Dashboard
         </p>
         <p className="mb-4">
@@ -21,7 +21,7 @@ export default function Footer() {
             href="https://github.com/ndim99"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white"
+            className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
           >
             GitHub
           </a>
@@ -29,13 +29,13 @@ export default function Footer() {
             href="https://www.linkedin.com/in/ndim19/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white"
+            className=" text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
           >
             LinkedIn
           </a>
           <a
             href="mailto:nikola.dimovski666@gmail.com"
-            className="text-gray-400 hover:text-white"
+            className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
           >
             Contact
           </a>

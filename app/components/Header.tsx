@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import ThemeButton from "./ThemeButton";
 export default function Header() {
   return (
-    <header className="bg-gray-800 text-white shadow-md 2xl:py-4 lg:py-3 py-2.5 2xl:px-5 lg:px-4 px-3 flex items-center justify-between border-b border-gray-700">
+    <header className="bg-gray-200 dark:bg-gray-200 dark:bg-gray-800 text-black dark:text-black dark:text-white shadow-md 2xl:py-4 lg:py-3 py-2.5 2xl:px-5 lg:px-4 px-3 flex items-center justify-between border-b border-gray-300 dark:border-gray-600">
       <div className="flex items-center 2xl:gap-3 lg:gap-2.5 gap-2">
         <Image
           src={"/nikola.png"}
@@ -16,9 +17,7 @@ export default function Header() {
         </h1>
       </div>
       <div className="flex space-x-4">
-        <button className="bg-gray-700 hover:bg-gray-500 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-75">
-          Mode
-        </button>
+        <ThemeButton />
       </div>
     </header>
   );

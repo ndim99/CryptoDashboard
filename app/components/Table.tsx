@@ -20,9 +20,9 @@ export default function Table({ tokens }: TableProps) {
   };
   return (
     <div className="overflow-x-auto">
-      <table className="w-full bg-gray-800 text-center rounded-lg shadow-lg">
+      <table className="w-full bg-gray-200 dark:bg-gray-800 text-center rounded-lg shadow-lg">
         <thead>
-          <tr className="bg-gray-700 text-gray-300 uppercase text-sm">
+          <tr className="bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-300 uppercase text-sm">
             <th className="2xl:p-4 lg:p-3.5 p-3 text-start rounded-tl-lg min-w-[240px]">
               Token
             </th>
@@ -48,7 +48,7 @@ export default function Table({ tokens }: TableProps) {
             <tr
               key={token.id}
               onClick={() => handleRowClick(token)}
-              className="border-b border-gray-700 hover:bg-gray-700 transition-colors cursor-pointer"
+              className="border-b border-gray-300 dark:border-gray-600 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors cursor-pointer"
             >
               {/* Token Info */}
               <td className="2xl:p-4 lg:p-3.5 p-3">
@@ -65,7 +65,7 @@ export default function Table({ tokens }: TableProps) {
                       <span className="uppercase font-bold">
                         {token.symbol}
                       </span>
-                      <span className="text-gray-400 text-sm">
+                      <span className="text-gray-600 dark:text-gray-400 text-sm">
                         {token.name}
                       </span>
                     </div>
