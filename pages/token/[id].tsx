@@ -1,4 +1,5 @@
 import WalletPerformanceChart from "@/app/components/Chart";
+import Container from "@/app/components/Container";
 import SocialLinks from "@/app/components/SocialLinks";
 import TokenDetailItem from "@/app/components/TokenDetailItem";
 import { useApp } from "@/providers/app";
@@ -11,7 +12,7 @@ export default function TokenDetails() {
 
   if (!tokenData) {
     return (
-      <div className="min-h-screen bg-gray-900 text-white p-6">
+      <div className="min-h-screen bg-gray-900 text-white 2xl:p-5 lg:p-4 p-3">
         Loading token data...
       </div>
     );
@@ -21,8 +22,8 @@ export default function TokenDetails() {
     interval >= 0 ? "text-green-500" : "text-red-500";
 
   return (
-    <div className="flex flex-col 2xl:gap-6 lg:gap-5 gap-4 2xl:p-6 lg:p-5 p-4 text-white">
-      <div className="flex flex-wrap p-4 border border-gray-700 rounded-lg gap-4 items-center justify-between bg-gray-700">
+    <Container>
+      <div className="flex flex-wrap p-4 border border-gray-700 rounded-lg 2xl:gap-4 gap-3 items-center justify-between bg-gray-700">
         <div className="flex items-center gap-2">
           <Image
             src={tokenData.image as string}
@@ -77,6 +78,6 @@ export default function TokenDetails() {
         />
       </div>
       <WalletPerformanceChart data={tokenData?.chartData} />
-    </div>
+    </Container>
   );
 }

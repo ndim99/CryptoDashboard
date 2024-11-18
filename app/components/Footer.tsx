@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-gray-400 2xl:py-6 lg:py-5 py-4 2xl:px-4 lg:px-3 px-2.5 border-t border-gray-700">
+    <footer className="bg-gray-800 text-gray-400 2xl:py-6 lg:py-5 py-4 2xl:px-5 lg:px-4 px-3 border-t border-gray-700">
       <div className="container mx-auto text-center">
         <p className="text-lg font-semibold text-white mb-2">
           Crypto Dashboard
