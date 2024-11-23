@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Crypto Dashboard**
 
-## Getting Started
+A modern crypto dashboard built with **Next.js**, **Tailwind CSS**, and **TypeScript**. This application showcases token data, price changes, and dynamic charts using static data to simulate real-world scenarios.
 
-First, run the development server:
+## 🚀 **Live Demo**  
+Check out the live version of the app hosted on [Vercel](https://crypto-dashboard-psi-two.vercel.app/).
 
+---
+
+## 🛠️ **Features**
+
+- 📊 **Dynamic Token Table**: Displays token names, prices, symbols, and 24-hour/1-hour price changes.  
+- 📈 **Interactive Charts**: Visual representation of token trends (static demo data).  
+- 🌐 **Social Links**: External links to token-related platforms (e.g., Twitter, Etherscan).  
+- 🎨 **Modern Design**: Responsive UI with dark mode support.  
+- ⚡ **Fast and Optimized**: Built with Next.js for performance and SEO optimization.  
+
+---
+
+## 🖼️ **Screenshots**  
+
+### **Main Dashboard**  
+![Main Dashboard](public/dashboard.png)
+
+### **Token Details Page**  
+![Token Details](public/token-details.png)
+
+---
+
+## 🔧 **Technologies Used**
+
+- **Next.js**: React framework used for simplified routing and project structure.  
+- **Tailwind CSS**: Utility-first CSS framework for styling.  
+- **TypeScript**: Static typing for improved code quality.  
+- **lightweight-charts**: For creating dynamic charts.  
+- **Vercel**: Hosting and deployment platform.
+
+---
+
+## 📂 **Project Structure**
+
+```plaintext
+├── components/         # Reusable components (e.g., table, chart)
+├── pages/              # Pages and routing for the application
+├── data/               # Static token and chart data
+├── types/              # TypeScript types for tokens, charts, etc.
+├── styles/             # Global CSS (global styles in global.css)
+├── public/             # Static assets (e.g., images, fonts)
+├── providers/          # React context providers using createContext
+├── fonts/              # Custom font configurations
+└── README.md           # Project documentation
+```
+
+---
+
+## 🚀 **Getting Started**
+
+### **Prerequisites**
+Make sure you have **Node.js** and **npm/yarn** installed.
+
+### **Installation**
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/ndim99/CryptoDashboard
+   cd crypto-dashboard
+   ```
+
+2. Install dependencies:  
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+### **Development Server**
+Start the development server:  
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **Build for Production**
+To create a production build:  
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📄 **Static Data**
 
-To learn more about Next.js, take a look at the following resources:
+This project uses static data stored in TypeScript files located in the /data directory to simulate token data and chart information. You can update these files to test different scenarios.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📚 **Learn More**
 
-## Deploy on Vercel
+To learn more about the tools and frameworks used in this project, check out:  
+- [Next.js Documentation](https://nextjs.org/docs)  
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)  
+- [Lightweight Charts Documentation](https://tradingview.github.io/lightweight-charts/)  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📤 **Deploying on Vercel**
+
+To deploy this project on Vercel:  
+1. Push your repository to GitHub.  
+2. Link the repository to [Vercel](https://vercel.com/).  
+3. Configure the build settings (`npm run build`).  
+4. Deploy the project.
+
+---
+
+## 💡 **Future Enhancements**
+
+- Add live API data integration for tokens and charts.  
+- Implement user authentication for personalized dashboards.  
+- Include search and filter functionality for the token table.
+
+---
+
+## 🧑‍💻 **Author**
+
+Developed by [Nikola](https://github.com/ndim99).
+
+---
