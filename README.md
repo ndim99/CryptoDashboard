@@ -93,7 +93,7 @@ npm run start
 
 ## 📄 **Static Data**
 
-This project uses static data stored in TypeScript files located in the /data directory to simulate token data and chart information. You can update these files to test different scenarios.
+This project uses static data stored in TypeScript file located in the /data directory to simulate token data and chart information. You can update these files to test different scenarios.
 
 ---
 
