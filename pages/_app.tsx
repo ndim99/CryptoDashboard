@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import React from "react";
 import { AppProps } from "next/app";
-import Layout from "@/app/components/Layout";
+import Layout from "@/components/Layout";
 import { AppProvider } from "@/providers/app";
 import { ThemeProvider } from "next-themes";
 

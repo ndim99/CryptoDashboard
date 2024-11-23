@@ -1,7 +1,7 @@
-import WalletPerformanceChart from "@/app/components/Chart";
-import Container from "@/app/components/Container";
-import SocialLinks from "@/app/components/SocialLinks";
-import TokenDetailItem from "@/app/components/TokenDetailItem";
+import WalletPerformanceChart from "@/components/Chart";
+import Container from "@/components/Container";
+import SocialLinks from "@/components/SocialLinks";
+import TokenDetailItem from "@/components/TokenDetailItem";
 import { useApp } from "@/providers/app";
 import { formatNumericAmountCompact } from "@/utils/formatting";
 import { formatPrice } from "@/utils/priceFormatting";

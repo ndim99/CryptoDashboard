@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { TokenData } from "@/types/TokenTypes";
 import { useApp } from "@/providers/app";
-import SocialLinks from "@/app/components/SocialLinks";
+import SocialLinks from "@/components/SocialLinks";
 import { formatPrice } from "@/utils/priceFormatting";
 import { formatNumericAmountCompact } from "@/utils/formatting";
 

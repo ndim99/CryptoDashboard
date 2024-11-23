@@ -1,9 +1,9 @@
-import ChainSelector from "@/app/components/ChainSelector";
+import ChainSelector from "@/components/ChainSelector";
 import React, { useState, useEffect } from "react";
-import { popularTokens } from "@/lib/data/popularTokens";
+import { popularTokens } from "@/data/popularTokens";
 import { TokenData } from "@/types/TokenTypes";
-import Container from "@/app/components/Container";
-import Table from "@/app/components/Table";
+import Container from "@/components/Container";
+import Table from "@/components/Table";
 
 export default function Dashboard() {
   const [chain, setChain] = useState("ethereum");
